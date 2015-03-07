@@ -1,0 +1,84 @@
+---
+---
+
+@charset 'UTF-8';
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600');
+@import url('font-awesome.min.css');
+@import 'helios';
+
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+.orange {
+  color: #df7366;
+}
+
+/* Hide all body elements */
+#feeds {
+  display: none;
+}
+/* Fix design attribution */
+.copyright {
+  //position: absolute;
+  //right: 25px;
+  //bottom: 25px;
+}
+#footer {
+  //padding: 0 !important;
+}
+
+.image-stripe {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+
+.image.featured{
+  &.irs, &.bitcoin, &.options {
+    //background-image: url('../images/pic08.jpg');
+    box-shadow: 0px 0px 10px #888;
+    img {
+      //opacity: .5;
+    }
+  }
+  &.watsi {
+    position: relative;
+    //background-image: url('../images/pic06.jpg');
+    box-shadow: 0px 0px 10px #888;
+    img {
+      max-height: 550px;
+    }
+    .donate-message {
+      -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+      position: absolute;
+      bottom: 25px;
+      right: 25px;
+      color: #888;
+      border: 5px solid #888;
+      height: 30%;
+      width: 25%;
+      padding: 3%;
+      font-weight: bold;
+    }
+  }
+}
+
+article {
+  &.bad {
+    border-bottom: solid 2px #f15755;
+  }
+  &.good {
+    border-bottom: solid 2px #1abc9c;
+  }
+}
