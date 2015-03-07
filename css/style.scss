@@ -17,6 +17,52 @@
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
 
+@-webkit-keyframes glow {
+  0% {
+    border-color: #888;
+  }
+  100% {
+    border-color: #000;
+  }
+}
+
+@-moz-keyframes glow {
+  0% {
+    border-color: #888;
+  }
+  100% {
+    border-color: #000;
+  }
+}
+
+@-o-keyframes glow {
+  0% {
+    border-color: #888;
+  }
+    100% {
+  border-color: #000;
+  }
+}
+
+@-ms-keyframes glow {
+  0% {
+    border-color: #888;
+  }
+  100% {
+    border-color: #000;
+  }
+}
+
+@keyframes glow {
+  0% {
+    border-color: #888;
+  }
+  100% {
+    border-color: #000;
+  }
+}
+
+$orange: #df7366;
 .orange {
   color: #df7366;
 }
@@ -46,6 +92,13 @@
   left: 25px;
 }
 
+.reel {
+  h2 {
+    padding: 18%;
+    color: white;
+  }
+}
+
 .image.featured{
   &.irs, &.bitcoin, &.options {
     //background-image: url('../images/pic08.jpg');
@@ -62,20 +115,41 @@
       max-height: 550px;
     }
     .donate-message {
-      -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
       position: absolute;
       bottom: 25px;
       right: 25px;
-      color: #888;
-      border: 5px solid #888;
+      //color: #888;
+      //border: 5px solid #888;
+      color: $orange;
+      border: 5px solid $orange;
       height: 30%;
       width: 25%;
       padding: 3%;
       font-weight: bold;
+      opacity: 0;
+      /*
+      -webkit-animation: glow 800ms ease-out infinite alternate;
+      -moz-animation: glow 800ms ease-out infinite alternate;
+      -o-animation: glow 800ms ease-out infinite alternate;
+      -ms-animation: glow 800ms ease-out infinite alternate;
+      animation: glow 800ms ease-out infinite alternate;
+      */
     }
+  }
+  &.one {
+    background-image: url('../images/pic01.jpg');
+  }
+  &.two {
+    background-image: url('../images/pic02.jpg');
+  }
+  &.three {
+    background-image: url('../images/pic03.jpg');
+  }
+  &.four {
+    background-image: url('../images/pic04.jpg');
+  }
+  &.five {
+    background-image: url('../images/pic05.jpg');
   }
 }
 
