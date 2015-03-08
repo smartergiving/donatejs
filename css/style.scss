@@ -6,6 +6,10 @@
 @import url('font-awesome.min.css');
 @import 'helios';
 
+/*********************************************************************************/
+/* Mixins and Variables                                                          */
+/*********************************************************************************/
+
 @mixin linear-gradient($fromColor, $toColor) {
   background-color: $toColor; /* Fallback Color */
   background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
@@ -67,18 +71,13 @@ $orange: #df7366;
   color: #df7366;
 }
 
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
 /* Hide all body elements */
 #feeds {
   display: none;
-}
-/* Fix design attribution */
-.copyright {
-  //position: absolute;
-  //right: 25px;
-  //bottom: 25px;
-}
-#footer {
-  //padding: 0 !important;
 }
 
 .wrapper.style1 {
@@ -101,16 +100,12 @@ $orange: #df7366;
 
 .image.featured{
   &.irs, &.bitcoin, &.options {
-    //background-image: url('../images/pic08.jpg');
     box-shadow: 0px 0px 10px #888;
-    img {
-      //opacity: .5;
-    }
   }
   &.watsi {
     position: relative;
-    //background-image: url('../images/pic06.jpg');
     box-shadow: 0px 0px 10px #888;
+    margin-bottom: 2em;
     img {
       max-height: 550px;
     }
@@ -118,25 +113,16 @@ $orange: #df7366;
       position: absolute;
       bottom: 25px;
       right: 25px;
-      //color: #888;
-      //border: 5px solid #888;
       color: $orange;
       border: 5px solid $orange;
+      border-radius: 5px;
       height: 30%;
       width: 25%;
-      padding: 3%;
-      //font-weight: bold;
+      padding: 2%;
       opacity: 0;
       font-size: 1.5em;
       line-height: 1.2;
       text-align: center;
-      /*
-      -webkit-animation: glow 800ms ease-out infinite alternate;
-      -moz-animation: glow 800ms ease-out infinite alternate;
-      -o-animation: glow 800ms ease-out infinite alternate;
-      -ms-animation: glow 800ms ease-out infinite alternate;
-      animation: glow 800ms ease-out infinite alternate;
-      */
       @media screen and (min-width: 850px) and (max-width: 950px) {
         font-size: 1.3em;
         line-height: 1em;
