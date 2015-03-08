@@ -109,6 +109,11 @@ $orange: #df7366;
   padding-top:25px
 }
 
+.lighter {
+  font-weight: 100;
+  //color: lighten(#483949, 30%);
+}
+
 .image.featured{
   &.irs, &.bitcoin, &.options {
     box-shadow: 0px 0px 10px #888;
