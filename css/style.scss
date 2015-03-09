@@ -21,6 +21,14 @@
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
 
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 @-webkit-keyframes glow {
   0% {
     border-color: #888;
@@ -122,19 +130,16 @@ $orange: #df7366;
     position: relative;
     box-shadow: 0px 0px 10px #888;
     margin-bottom: 2em;
-    img {
-      max-height: 550px;
-    }
     .donate-message {
       position: absolute;
-      bottom: 25px;
+      bottom: 35%;
       right: 25px;
       color: $orange;
       border: 5px solid $orange;
       border-radius: 5px;
       height: 30%;
       width: 25%;
-      padding: 2%;
+      padding: 25px;
       opacity: 0;
       font-size: 1.5em;
       line-height: 1.2;
@@ -146,8 +151,10 @@ $orange: #df7366;
       @media screen and (min-width: 500px) and (max-width: 850px) {
         font-size: .8em;
         line-height: 1em;
+        padding: 10px;
       }
       .rs-donate-message {
+        @include vertical-align;
         @media screen and (max-width: 500px) {
           display: none;
         }
