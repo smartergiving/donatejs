@@ -93,6 +93,13 @@ $orange: #df7366;
     //margin-bottom: 0;
   }
 
+.button.circled {
+  .fa {
+    vertical-align: middle;
+    color: lighten($orange, 20%);
+  }
+}
+
 .image-stripe {
   position: absolute;
   bottom: 25px;
